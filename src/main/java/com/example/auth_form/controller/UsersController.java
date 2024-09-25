@@ -4,6 +4,7 @@ import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,7 @@ public class UsersController {
   @Autowired
   private UsersService usersService;
 
+  @CrossOrigin(origins = "https://react-form-auth.vercel.app")
   @PostMapping("/signup")
   public ResponseEntity<?> register(@RequestBody AuthRequest request) {
     try {
@@ -29,6 +31,7 @@ public class UsersController {
     }
   }
 
+  @CrossOrigin(origins = "https://react-form-auth.vercel.app")
   @PostMapping("/login")
   public ResponseEntity<?> login(@RequestBody AuthRequest request) {
       try {

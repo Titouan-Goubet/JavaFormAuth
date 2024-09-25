@@ -62,8 +62,6 @@ Thumbs.db
 /application.yml
 
 # Docker
-**/docker-compose.override.yml
-**/docker-compose.*.yml
 *.log
 
 # Misc
